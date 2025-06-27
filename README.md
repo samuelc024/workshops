@@ -41,3 +41,20 @@ Final Documentation
 
 The complete and detailed system design report can be accessed below:
 - [Workshop 2](./Workshop_2/Workshop_2.pdf)
+
+# Workshop 3 - Grupo Bimbo Inventory Demand Simulation
+
+This repository contains the computational simulation for the [Grupo Bimbo Inventory Demand](https://www.kaggle.com/competitions/grupo-bimbo-inventory-demand) competition, validating the system design from Workshop #2 through data-driven experiments. Key components:
+
+- **Data pipeline** cleaning and feature engineering
+- **XGBoost model** for demand forecasting
+- **Chaos testing** with noise injection
+- **Performance analysis** (RMSE, robustness)
+## ⚠ Usage Note
+
+The dataset `train.csv` must be downloaded manually from [Kaggle](https://www.kaggle.com/competitions/grupo-bimbo-inventory-demand/data?select=train.csv.zip) and placed in the simulation folder (excluded from Git due to size).
+
+---
+The simulation report and code can be accessed below:
+- [Simulation Report PDF](./Workshop_3_Simulation/Workshop3Report.pdf)
+- [Notebook Code and Requirements](./Workshop_3_Simulation)
