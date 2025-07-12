@@ -60,10 +60,43 @@ The simulation report and code can be accessed below:
 - [Notebook Code and Requirements](./Workshop_3_Simulation)
 ### final_project - [Go to folder](./final_project)
 
-This project corresponds to a solution developed for a product demand forecasting competition. It utilizes categorical variable encoding techniques (mean encoding and ordinal encoding), along with numerical preprocessing and prediction using a pre-trained model.
+This project presents a machine learning solution for the [Grupo Bimbo Inventory Demand Forecasting](https://www.kaggle.com/competitions/grupo-bimbo-inventory-demand) competition. It aims to predict weekly product demand for individual clients, using advanced data processing and modeling techniques.
 
-- **Main file**: `Final.py`
-- **Requirements**: listed in [`requirements.txt`](./final_project/requirements.txt)
-- **Important note**: The files `test.csv` and `submission_sample.csv` were not uploaded due to size and licensing restrictions. They are available as part of the official competition dataset on Kaggle.
-- **Key dependencies**: `pandas`, `numpy`, `scikit-learn`, `xgboost`, `Flask`
+#### Key Technologies and Development Highlights
+
+- **Language & Libraries**: Python was used with libraries such as `Pandas`, `NumPy`, `Scikit-learn`, and `XGBoost` for data processing and modeling. `Matplotlib` and `Seaborn` supported result visualization.
+- **Data Handling**:
+  - The original dataset contains over 74 million records, so a 1% stratified subsample was used for efficient experimentation.
+  - Cleaning involved removing extreme demand outliers and filling missing values with defaults (e.g., 0 for returns).
+- **Feature Engineering**:
+  - Lag-based features like previous week’s demand (`Lag1_Demanda`) were introduced to capture temporal trends.
+  - Aggregated statistics (e.g., mean product demand) were computed.
+  - Categorical variables (e.g., sales channels) were encoded to prevent misinterpretation.
+- **Modeling Approach**:
+  - An `XGBoost` regressor was trained with temporal validation: train on weeks 3–7, test on weeks 8–9.
+  - Hyperparameters were manually tuned for depth, learning rate, and subsampling to balance performance and efficiency.
+- **Robustness Testing**:
+  - The model was tested under chaotic conditions, such as:
+    - Adding Gaussian noise to demand.
+    - Removing 10% of input rows.
+  - These stress tests measured performance degradation to assess real-world resilience.
+
+#### Results
+
+- **Baseline RMSE**: 5.2 (subsampled data), a 40% improvement over naïve benchmarks.
+- **Under Chaos**:
+  - 28.8% RMSE increase with noise.
+  - 13.5% RMSE increase with missing data.
+- **Key Drivers**: Lagged and aggregated features contributed to over 60% of predictive power.
+
+#### Files & Requirements
+
+- **Main script**: [`Final.py`](./final_project/Final.py)
+- **Requirements**: [`requirements.txt`](./final_project/requirements.txt)
+- **Note**: The files `test.csv` and `submission_sample.csv` were not included due to size/licensing limits. You can download them from the [official Kaggle dataset](https://www.kaggle.com/competitions/grupo-bimbo-inventory-demand/data).
+
+---
+
+> Developed by J.P. Arismendi Sanchez, S. Casas Cantor, and J.C. Rincón Rojas · June 2025  
+> Full simulation report: available in [`Workshop3Report.pdf`](./final_project/Workshop3Report.pdf)
 
