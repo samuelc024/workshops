@@ -81,13 +81,6 @@ This project presents a machine learning solution for the [Grupo Bimbo Inventory
     - Removing 10% of input rows.
   - These stress tests measured performance degradation to assess real-world resilience.
 
-#### Results
-
-- **Baseline RMSE**: 5.2 (subsampled data), a 40% improvement over naïve benchmarks.
-- **Under Chaos**:
-  - 28.8% RMSE increase with noise.
-  - 13.5% RMSE increase with missing data.
-- **Key Drivers**: Lagged and aggregated features contributed to over 60% of predictive power.
 
 #### Files & Requirements
 
