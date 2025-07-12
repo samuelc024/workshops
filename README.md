@@ -58,23 +58,22 @@ The dataset `train.csv` must be downloaded manually from [Kaggle](https://www.ka
 The simulation report and code can be accessed below:
 - [Simulation Report PDF](./Workshop_3_Simulation/Workshop3Report.pdf)
 - [Notebook Code and Requirements](./Workshop_3_Simulation)
-## Final Course Project: Prediction-Enhanced Demand Forecasting System
+## Final Course Project: LLM-Augmented Pipeline
+### Project Structure
+📂 [`/final_project`](final_project)
+- `Final.py` - Optimized prediction pipeline
+- `requirements.txt` - Dependencies (XGBoost 0.90, scikit-learn 0.24.1)
+- `submission_llm_v1.csv` - Kaggle submission file (RMSE: 1.72)
 
-### Project Overview
-This project integrates all workshop components (Analysis, Design, and Simulation) into an operational demand forecasting pipeline for Grupo Bimbo's inventory management, enhanced with LLM capabilities. The system combines:
-- Traditional feature engineering (mean encoding, log transforms)
-- XGBoost modeling (v0.90)
-- LLM-augmented preprocessing (feature suggestion/code refinement)
+### Key Enhancements
+1. **LLM Integration**
+   - GPT-3.5 for feature suggestions
+   - Automated code refinement
 
-### Key Components
-| Directory | Contents |
-|-----------|----------|
-| [`/final_project`](final_project) | Main implementation files |
-| `Final.py` | Optimized prediction pipeline |
-| `requirements.txt` | Frozen dependencies |
-| `submission_llm_v1.csv` | Sample Kaggle submission |
+2. **Improved Workflow**
+```bash
+# Generate encodings
+python -c "from Final import save_mean_encodings, save_text_encodings; save_mean_encodings(); save_text_encodings()"
 
-### Usage
-1. Generate encodings:
-   ```bash
-   python -c "from Final import save_mean_encodings, save_text_encodings; save_mean_encodings(); save_text_encodings()"
+# Run predictions
+python evaluate_competition.py
