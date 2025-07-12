@@ -58,4 +58,12 @@ The dataset `train.csv` must be downloaded manually from [Kaggle](https://www.ka
 The simulation report and code can be accessed below:
 - [Simulation Report PDF](./Workshop_3_Simulation/Workshop3Report.pdf)
 - [Notebook Code and Requirements](./Workshop_3_Simulation)
+### final_project - [Go to folder](./final_project)
+
+This project corresponds to a solution developed for a product demand forecasting competition. It utilizes categorical variable encoding techniques (mean encoding and ordinal encoding), along with numerical preprocessing and prediction using a pre-trained model.
+
+- **Main file**: `Final.py`
+- **Requirements**: listed in [`requirements.txt`](./final_project/requirements.txt)
+- **Important note**: The files `test.csv` and `submission_sample.csv` were not uploaded due to size and licensing restrictions. They are available as part of the official competition dataset on Kaggle.
+- **Key dependencies**: `pandas`, `numpy`, `scikit-learn`, `xgboost`, `Flask`
 
