@@ -58,7 +58,7 @@ The dataset `train.csv` must be downloaded manually from [Kaggle](https://www.ka
 The simulation report and code can be accessed below:
 - [Simulation Report PDF](./Workshop_3_Simulation/Workshop3Report.pdf)
 - [Notebook Code and Requirements](./Workshop_3_Simulation)
-## Final Course Project: LLM-Enhanced Demand Forecasting System
+## Final Course Project: Prediction-Enhanced Demand Forecasting System
 
 ### Project Overview
 This project integrates all workshop components (Analysis, Design, and Simulation) into an operational demand forecasting pipeline for Grupo Bimbo's inventory management, enhanced with LLM capabilities. The system combines:
