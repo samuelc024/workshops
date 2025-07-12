@@ -66,7 +66,6 @@ This project presents a machine learning solution for the [Grupo Bimbo Inventory
 
 - **Language & Libraries**: Python was used with libraries such as `Pandas`, `NumPy`, `Scikit-learn`, and `XGBoost` for data processing and modeling. `Matplotlib` and `Seaborn` supported result visualization.
 - **Data Handling**:
-  - The original dataset contains over 74 million records, so a 1% stratified subsample was used for efficient experimentation.
   - Cleaning involved removing extreme demand outliers and filling missing values with defaults (e.g., 0 for returns).
 - **Feature Engineering**:
   - Lag-based features like previous week’s demand (`Lag1_Demanda`) were introduced to capture temporal trends.
@@ -75,11 +74,7 @@ This project presents a machine learning solution for the [Grupo Bimbo Inventory
 - **Modeling Approach**:
   - An `XGBoost` regressor was trained with temporal validation: train on weeks 3–7, test on weeks 8–9.
   - Hyperparameters were manually tuned for depth, learning rate, and subsampling to balance performance and efficiency.
-- **Robustness Testing**:
-  - The model was tested under chaotic conditions, such as:
-    - Adding Gaussian noise to demand.
-    - Removing 10% of input rows.
-  - These stress tests measured performance degradation to assess real-world resilience.
+
 
 
 #### Files & Requirements
