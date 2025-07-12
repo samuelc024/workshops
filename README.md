@@ -58,22 +58,4 @@ The dataset `train.csv` must be downloaded manually from [Kaggle](https://www.ka
 The simulation report and code can be accessed below:
 - [Simulation Report PDF](./Workshop_3_Simulation/Workshop3Report.pdf)
 - [Notebook Code and Requirements](./Workshop_3_Simulation)
-## Final Course Project: LLM-Augmented Pipeline
-### Project Structure
-📂 [`/final_project`](final_project)
-- `Final.py` - Optimized prediction pipeline
-- `requirements.txt` - Dependencies (XGBoost 0.90, scikit-learn 0.24.1)
-- `submission_llm_v1.csv` - Kaggle submission file (RMSE: 1.72)
 
-### Key Enhancements
-1. **LLM Integration**
-   - GPT-3.5 for feature suggestions
-   - Automated code refinement
-
-2. **Improved Workflow**
-```bash
-# Generate encodings
-python -c "from Final import save_mean_encodings, save_text_encodings; save_mean_encodings(); save_text_encodings()"
-
-# Run predictions
-python evaluate_competition.py
